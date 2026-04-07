@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Labroad</title>
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --border-width: 2px;
+            --secondary-button: #23a094;
+        }
+
+        body { font-family: 'Inter', sans-serif; background: var(--bg-color); margin: 0; padding: 0; }
+        
+        header { background: #fff; border-bottom: var(--border-width) solid #000; padding: 1rem 2rem; }
+        .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: #000; }
+
+        .form-container { max-width: 500px; margin: 60px auto; background: #fff; border: var(--border-width) solid #000; border-radius: 4px; padding: 40px; box-shadow: 8px 8px 0 #000; }
+        
+        h1 { font-weight: 800; margin-top: 0; }
+
+        .form-group { margin-bottom: 20px; }
+        
+        label { display: block; font-weight: 700; margin-bottom: 8px; }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: var(--border-width) solid #000;
+            border-radius: 4px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--secondary-button);
+            color: #fff;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: var(--border-width) solid #000;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .btn-submit:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 #000; }
+        
+        #error-msg { color: red; display: none; margin-top: 10px; font-weight: bold; }
+
+        footer { border-top: var(--border-width) solid #000; padding: 20px; text-align: center; background: #fff; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header>
+        <a href="index.html" class="logo">labroad</a>
+    </header>
+
+    <main class="form-container">
+        <h1>Hablemos</h1>
+        <p>¿Tienes dudas sobre los productos digitales?</p>
+
+        <form id="contact-form" action="gracias.html">
+            <div class="form-group">
+                <label for="user_name">Nombre</label>
+                <input type="text" id="user_name" name="name" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="form-group">
+                <label for="user_email">Email</label>
+                <input type="email" id="user_email" name="email" placeholder="email@ejemplo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Asunto</label>
+                <select id="subject" name="subject">
+                    <option value="soporte">Soporte Técnico</option>
+                    <option value="ventas">Consulta de Ventas</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submit-button">Enviar Mensaje</button>
+            <p id="error-msg">Por favor, rellena todos los campos.</p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Labroad Co.</p>
+    </footer>
+
+    <script>
+        // Simulación de validación simple
+        document.getElementById('contact-form').onsubmit = function(e) {
+            const name = document.getElementById('user_name').value;
+            if(name.length < 3) {
+                e.preventDefault();
+                document.getElementById('error-msg').style.display = 'block';
+                // Trigger para GTM: Evento personalizado de error
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'form_error',
+                    'error_type': 'nombre_corto'
+                });
+            }
+        };
+    </script>
+</body>
+</html>
