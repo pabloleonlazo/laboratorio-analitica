@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Labroad</title>
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --border-width: 2px;
+        }
+
+        body { font-family: 'Inter', sans-serif; background: var(--bg-color); margin: 0; padding: 0; }
+        
+        header { background: #fff; border-bottom: var(--border-width) solid #000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: #000; }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 20px; }
+        h1 { font-weight: 800; font-size: 2.5rem; margin-bottom: 30px; }
+
+        .product-list { display: flex; flex-direction: column; gap: 20px; }
+
+        .item-row {
+            background: #fff;
+            border: var(--border-width) solid #000;
+            border-radius: 4px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.1s;
+        }
+
+        .item-row:hover { transform: translateX(5px); box-shadow: 5px 0 0 #ff90e8; }
+
+        .item-details h3 { margin: 0; font-size: 1.4rem; }
+        .item-details span { color: #666; font-weight: 600; }
+
+        .btn-select {
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+        }
+
+        footer { border-top: var(--border-width) solid #000; padding: 20px; text-align: center; background: #fff; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header>
+        <a href="index.html" class="logo">labroad</a>
+    </header>
+
+    <main class="container">
+        <h1>Explorar Catálogo</h1>
+        
+        <div class="product-list">
+            <div class="item-row" data-item-name="Guía Avanzada de GA4" data-item-id="GA4-001">
+                <div class="item-details">
+                    <h3>Guía Avanzada de GA4</h3>
+                    <span>$19.00</span>
+                </div>
+                <a href="producto-detalle.html" class="btn-select catalog-link">Ver más</a>
+            </div>
+
+            <div class="item-row" data-item-name="Masterclass GTM" data-item-id="GTM-002">
+                <div class="item-details">
+                    <h3>Masterclass GTM</h3>
+                    <span>$49.00</span>
+                </div>
+                <a href="producto-detalle.html" class="btn-select catalog-link">Ver más</a>
+            </div>
+
+            <div class="item-row" data-item-name="Dashboard Looker" data-item-id="LS-003">
+                <div class="item-details">
+                    <h3>Dashboard Looker</h3>
+                    <span>$29.00</span>
+                </div>
+                <a href="producto-detalle.html" class="btn-select catalog-link">Ver más</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Labroad Co.</p>
+    </footer>
+</body>
+</html>
