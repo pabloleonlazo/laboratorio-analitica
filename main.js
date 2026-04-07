@@ -1,6 +1,6 @@
 // main.js
 (function() {
-    var gtmId = 'GTM-XXXXXXX'; // <--- Pon aquí tu ID
+    var gtmId = 'GTM-Prueba'; // <--- Pon aquí tu ID
 
     // Inyectar el script del HEAD
     var script = document.createElement('script');
