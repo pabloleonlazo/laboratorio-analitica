@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Labroad</title>
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --primary-button: #ff90e8;
+            --border-width: 2px;
+        }
+
+        body { font-family: 'Inter', sans-serif, Arial; background: var(--bg-color); margin: 0; padding: 0; }
+        
+        header { background: #fff; border-bottom: var(--border-width) solid #000; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; text-decoration: none; color: #000; }
+
+        .container { max-width: 900px; margin: 50px auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 20px; }
+        
+        .product-image-large { background: #ffc700; border: var(--border-width) solid #000; border-radius: 4px; height: 400px; display: flex; align-items: center; justify-content: center; font-size: 5rem; font-weight: 800; }
+
+        .product-content h1 { font-size: 2.5rem; margin-top: 0; font-weight: 800; }
+        .price-tag { font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; display: block; }
+        
+        .description { margin-bottom: 30px; line-height: 1.6; color: #333; }
+
+        /* Estilo Botón Gumroad */
+        .btn-add-to-cart {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+
+        .btn-add-to-cart:active { transform: scale(0.98); }
+
+        .features { margin-top: 40px; padding-top: 20px; border-top: 1px solid #ccc; }
+        .features li { margin-bottom: 10px; font-weight: 500; }
+
+        footer { border-top: var(--border-width) solid #000; padding: 20px; text-align: center; background: #fff; margin-top: 50px; }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header>
+        <a href="index.html" class="logo">labroad</a>
+    </header>
+
+    <main class="container">
+        <div class="product-image-large">PDF</div>
+        
+        <div class="product-content">
+            <span id="product-sku" style="color: #666; font-size: 0.8rem;">SKU: GA4-AV-001</span>
+            <h1 id="item-name">Guía Avanzada de GA4</h1>
+            <span class="price-tag">$<span id="item-price">19.00</span></span>
+            
+            <p class="description">
+                Aprende a dominar el modelo de datos basado en eventos. Este ebook incluye ejercicios prácticos, configuraciones de BigQuery y plantillas de Looker Studio.
+            </p>
+
+            <button class="btn-add-to-cart" id="main-buy-button" data-category="Ebook" data-currency="USD">
+                ¡Lo quiero!
+            </button>
+
+            <ul class="features">
+                <li>✅ Acceso de por vida</li>
+                <li>✅ Actualizaciones gratuitas</li>
+                <li>✅ Comunidad privada</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Labroad Co.</p>
+    </footer>
+
+    <script>
+        // Simulando una pequeña interacción para GTM
+        document.getElementById('main-buy-button').addEventListener('click', function() {
+            alert('Producto añadido (simulado). Ahora configura GTM para medir este clic.');
+        });
+    </script>
+</body>
+</html>
